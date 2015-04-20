@@ -2572,6 +2572,12 @@ p {
 
 #brands h4 {
   margin: 0; }
+#brands #design-machine h4 {
+  color: #ae4475; }
+#brands #building-blocks h4 {
+  color: #d2e33c; }
+#brands #the-factory h4 {
+  color: #ff6c2f; }
 #brands p {
   margin-top: 0;
   margin-bottom: 2rem; }
