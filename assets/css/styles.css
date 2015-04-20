@@ -2499,19 +2499,19 @@ p {
         border-color: transparent; }
       #works .section-heading .pf-menu-trigger.active .fa {
         transform: rotate(90deg) scale(0.5); }
-  #works .gallery-container {
+  #works #gallery-container {
     text-align: center; }
     @media screen and (min-width: 320px) and (max-width: 568px) {
-      #works .gallery-container {
+      #works #gallery-container {
         padding-top: 30px; } }
-    #works .gallery-container .gallery-item {
+    #works #gallery-container .gallery-item {
       display: inline-block;
       height: 300px;
       width: 300px;
       margin-top: -4px;
       margin-left: 1px;
       margin-right: 1px; }
-      #works .gallery-container .gallery-item img {
+      #works #gallery-container .gallery-item img {
         width: 100%;
         height: auto; }
 

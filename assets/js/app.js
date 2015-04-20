@@ -8,19 +8,19 @@ function buildGallery(options) {
     var data = portfolio[sel];
 
     //reset
-    gallery.html('');
-    info_box.html('');
+    gallery.innerHTML = '';
+    info_box.innerHTML = '';
 
-    gallery.attr('data-current', sel);
+    gallery.setAttribute('data-current', sel);
 
     //build info box
     var title = document.createElement('h3');
     title.appendChild(document.createTextNode(data.title));
-    info_box.append(title);
+    info_box.appendChild(title);
 
     var desc = document.createElement('p');
     desc.appendChild(document.createTextNode(data.description));
-    info_box.append(desc);
+    info_box.appendChild(desc);
 
     var rm_wrap = document.createElement('div');
     var rma     = document.createElement('a');
@@ -30,7 +30,7 @@ function buildGallery(options) {
     rma.appendChild(document.createTextNode('Read more...'));
     rma.setAttribute('href', '#');
     rm_wrap.appendChild(rma);
-    info_box.append(rm_wrap);
+    info_box.appendChild(rm_wrap);
     
     $.each(data.photos, function(key, val) {
         var g_item = document.createElement('div');
@@ -45,51 +45,66 @@ function buildGallery(options) {
 
         a.appendChild(img);
         g_item.appendChild(a);
-        gallery.append(g_item);        
+        gallery.appendChild(g_item);        
     });
 };
 
+function pfMenuSwitcher () {
+    var sel        = this.getAttribute('data-reference');
+    console.log(sel);
+    if(gallery_container.attr('data-current') != sel ) {
+        buildGallery({
+            key: sel,
+            gallerycontainer: gallery_container,
+            infocontainer: gallery_info,
+            itemclass : item_class
+        });
 
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
+        });
+    }
+}
+
+//workaround for header getting unstuck at contact section.
+//occurs when page is refreshed whilst header has stuck class.
+window.onbeforeunload = function(){
+    window.scrollTo(0,0);
+}
 $(function () {
     "use strict"
-
+    
     var pf_data          = portfolio;
-    var logo_wrapper     = $('.top-logo-wrapper');
-    var logo             = $('.logo');
-    var header           = $('.main-header');
+    var logo_wrapper     = document.getElementsByClassName('top-logo-wrapper'); 
+    var logo             = document.getElementsByClassName('logo')[0];
+    var header           = document.getElementsByClassName('main-header')[0];
     var slides           = $('#slides');
-    var nav_container    = $('.nav-wrapper');
+    var nav_container    = document.getElementsByClassName('nav-wrapper'); //$('.nav-wrapper');
     var header_scroll    = false;
     
-    var pf_trigger       = $('.pf-menu-trigger');
-    var pf_menu          = $('.pf-menu-wrapper');
-    var pf_item          = $('.pf-item-link');
-    var gallery_container= $('.gallery-container');
-    var gallery_info     = $('.pf-info');
+    var pf_trigger       = document.getElementsByClassName('pf-menu-trigger')[0]//$('.pf-menu-trigger');
+    var pf_menu          = document.getElementsByClassName('pf-menu-wrapper')[0];//$('.pf-menu-wrapper');
+    var pf_item          = document.getElementsByClassName('pf-item-link');//$('.pf-item-link');
+    var gallery_container= document.getElementById('gallery-container');//$('.gallery-container');
+    var gallery_info     = document.getElementById('pf-info');//$('.pf-info');
     var def_gallery_item = 'uc';
     var item_class       = 'gallery-item';
     
-    var device_width     = $('html').width();
+    var device_width     = document.getElementsByTagName('html').width;
     var dev_flag         = false;
     
-    var logo             = $('.logo');
     var main_nav         = $('.menu ul');
-    var main_nav_item         = $('.menu ul li');
+    var main_nav_item    = $('.menu li');
     
-    logo.addClass('sprite-inv_logo');
-
- 
-    
-    if ($('body').scrollTop() > 0) {
-        header.addClass('stuck');    
-    }
-    else {
-        header.removeClass('stuck');
-    }
-    
+    logo.className+=' sprite-inv_logo';
     device_width <= 568 && device_width >= 320? dev_flag = true : '';
-    console.log(dev_flag);
     
+//    console.log(logo);
+//    console.log('logoClassName: '+logo.className);
+//    
+//    console.log('deviceflag: '+dev_flag);
+//    console.log('headerscroll: '+header_scroll);
+//    
     slides.superslides({
         play: 3000,
         pagination: false,
@@ -132,18 +147,17 @@ $(function () {
     
     //events
     
-    pf_trigger.click(function () {
-        if(!pf_trigger.hasClass('active')) {
-           pf_trigger.addClass('active');
-           pf_menu.addClass('active');
+    pf_trigger.onclick = function () {
+        if(!pf_trigger.className.match(/\bactive\b/)) {
+           pf_trigger.className+=' active';
+           pf_menu.className+=' active';
         }
        else {
-           pf_trigger.removeClass('active');
-           pf_menu.removeClass('active');
-        }
-           
-        
-    });
+           pf_trigger.className = pf_trigger.className.replace(/\bactive\b/,'');
+           pf_menu.className = pf_menu.className.replace(/\bactive\b/,'');
+        }    
+    };
+    
     var logo_stick = new Waypoint.Sticky({
         element: logo_wrapper
     });    
@@ -152,55 +166,58 @@ $(function () {
         element: header,
         handler: function () {
             if(!header_scroll) {
-                header.addClass('stuck');
-                console.log('stuck');
-                logo.removeClass('sprite-inv_logo');
-                logo.addClass('sprite-reg_logo');
+                header.className+=' stuck';
+                //console.log('stuck');
+                logo.className = logo.className.replace(/\bsprite-inv_logo\b/,'');
+                logo.className+=' sprite-reg_logo';
                 header_scroll = true;
                 slides.superslides('stop');
-                
-                
+  
             }
             else {
-                console.log('unstuck');
-                header.removeClass('stuck');
-                logo.removeClass('sprite-reg_logo');
-                logo.addClass('sprite-inv_logo');
+                //console.log('unstuck');
+                header.className = header.className.replace(/\bstuck\b/,'');
+                logo.className = logo.className.replace(/\bsprite-reg_logo\b/,'');
+                logo.className+=' sprite-inv_logo';
                 slides.superslides('start');
                 header_scroll = false;
                 main_nav.removeClass('menu-show')
-
             }
             
-        }
+        },
+        offset: '0'
     });
     
-    pf_item.click(function () {
-        var sel        = $(this).attr('data-reference');
-        if(gallery_container.attr('data-current') != sel ) {
-            buildGallery({
-                key: sel,
-                gallerycontainer: gallery_container,
-                infocontainer: gallery_info,
-                itemclass : item_class
-            });
-            
-            $("img.lazy").lazyload({
-                effect : "fadeIn"
-            });
-        }
+    for(var i = 0; i < pf_item.length; i++) {
+        pf_item[i].onclick = function () {
+            var sel        = this.getAttribute('data-reference');
+            console.log(sel);
+            if(gallery_container.getAttribute('data-current') != sel ) {
+                buildGallery({
+                    key: sel,
+                    gallerycontainer: gallery_container,
+                    infocontainer: gallery_info,
+                    itemclass : item_class
+                });
 
-    });
+                $("img.lazy").lazyload({
+                    effect : "fadeIn"
+                });
+                //reset menu trigger appearance
+                pf_trigger.className = pf_trigger.className.replace(/\bactive\b/,'');
+                pf_menu.className = pf_menu.className.replace(/\bactive\b/,'');
+            }
+        }
+    }
     
-    logo.click(function () {
+    logo.onclick = function () {
         var showclass = 'menu-show';
         var scroll = $('body').scrollTop();
-        
         if(scroll > 0 ) {
             main_nav.hasClass(showclass)? main_nav.removeClass(showclass) :main_nav.addClass(showclass);
         }
 
-    });
+    } ;
  
     main_nav_item.click(function () {
         var showclass = 'menu-show';

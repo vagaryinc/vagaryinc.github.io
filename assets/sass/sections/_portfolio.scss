@@ -88,8 +88,9 @@
     }
     
 
-    .gallery-container {
+    #gallery-container {
         text-align: center;
+        
         @media screen and (min-width: 320px) and (max-width: 568px) {
             padding-top: 30px;
         }

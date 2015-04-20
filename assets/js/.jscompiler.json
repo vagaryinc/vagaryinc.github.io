@@ -1,0 +1,27 @@
+{
+	"outputs": [
+		{
+			"inputs": [
+				"../../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js",
+				"../../bower_components/jquery-waypoints/lib/shortcuts/sticky.min.js",
+				"../../bower_components/superslides/dist/jquery.superslides.min.js",
+				"../../bower_components/lightbox2/js/lightbox.min.js",
+				"../../bower_components/jquery.lazyload/jquery.lazyload.js",
+				"../../bower_components/instafeed.js/instafeed.min.js"
+			],
+			"output": "deps.min.js",
+			"generateMap": true,
+			"mangle" : true,
+			"isolate": false
+		},
+		{
+			"inputs": [
+				"app.js",
+				"pf.js"],
+			"output": "app.min.js",
+			"generateMap": true,
+			"mangle": true,
+			"isolate": false
+		}
+	]
+}
