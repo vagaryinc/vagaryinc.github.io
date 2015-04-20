@@ -2,7 +2,7 @@ var portfolio = {
     uc: {
         title: 'Urban Contemporary',
         description: 'A design that offers an effortless transition from the rowdy and demanding city life to your tranquil and easy dwelling. Step inside this home and come face to face with the Urban Contemporary experience, restrained yet surprises you with bursts of flamboyant colors, shapes, and details.',
-        photoroot: 'assets/images/pf/uc/',
+        photoroot: 'https://s3-ap-southeast-1.amazonaws.com/vgry-files/portfolio/uc/',
         photos: [
             {src: '300/9-12.jpg', hsrc: '9-12.jpg', caption: ''},
             {src: '300/9-13.jpg', hsrc: '9-13.jpg', caption: ''},
@@ -14,7 +14,7 @@ var portfolio = {
     cl: {
         title: 'Condo Living | Philippines',
         description: 'Published designs for Condo Living\'s Designer Challenge for its December 2014 issue.',
-        photoroot: 'assets/images/pf/cl/',
+        photoroot: 'https://s3-ap-southeast-1.amazonaws.com/vgry-files/portfolio/cl/',
         photos: [
             {src: '300/CL_GuestBedroom.jpg', hsrc: 'CL_GuestBedroom.jpg', caption: ''},
             {src: '300/CL_Kitchen.jpg', hsrc: 'CL_Kitchen.jpg', caption: ''},
@@ -26,7 +26,7 @@ var portfolio = {
     nt: {
         title: 'The 90s Re-Imagined',
         description: 'The ultra-feminine lavender-colored apartment that Rachel and Monica shared is given a Custom Chic update, with more clean line and ingeniously placed explosions of details. It is made more suited for today\'s stylish modern women. Chandler and Joey\'s aparatment is given a swanky Pop Art transformation fitting for a 2014 bachelor lifestyle.',
-        photoroot: 'assets/images/pf/nt/',
+        photoroot: 'https://s3-ap-southeast-1.amazonaws.com/vgry-files/portfolio/nt/',
         photos: [
             {src: '300/5.jpg', hsrc: '5.jpg', caption: ''},
             {src: '300/6.jpg', hsrc: '6.jpg', caption: ''},
@@ -39,7 +39,7 @@ var portfolio = {
     so: {
         title: 'Sonera - Southvale',
         description: 'Southvale, Daang Hari, Alabang',
-        photoroot: 'assets/images/pf/so/',
+        photoroot: 'https://s3-ap-southeast-1.amazonaws.com/vgry-files/portfolio/so/',
         photos: [
             {src: '300/master.jpg', hsrc: 'master.jpg', caption: ''},
             {src: '300/dining.jpg', hsrc: 'dining.jpg', caption: ''},
