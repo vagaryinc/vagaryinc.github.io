@@ -1,0 +1,50 @@
+#contact {
+    -webkit-box-shadow: 1px -15px 30px -9px rgba(0,0,0,0.38);
+    -moz-box-shadow: 1px -15px 30px -9px rgba(0,0,0,0.38);
+    box-shadow: 1px -15px 30px -9px rgba(0,0,0,0.38);
+    ul {
+        list-style: none;
+    }
+    
+    .sm-links {
+        a {
+            color: #444;
+            font-size: 2.5rem;
+        }
+        
+        li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+    
+    .box {
+        height: 50px;
+    }
+    
+    .left-block {
+        font-family: $heading-font-stack;
+        font-size: 2rem;
+    }
+    
+    .right-block {
+        font-family: $base-font-family;
+    }
+    
+    @media screen and (min-width: 320px) and (max-width: 568px) {
+        .section-heading {
+            text-align: center;
+        }
+        
+        .left-block, .right-block {
+            text-align: center;
+        }
+        
+        .left-block {
+            font-size: 1.5em;        }
+        
+        .right-block {
+            margin-bottom: 10px;
+        }
+    }
+}

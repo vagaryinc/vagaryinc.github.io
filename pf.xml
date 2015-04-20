@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio root="https://s3-ap-southeast-1.amazonaws.com/vgry-files/portfolio/">
+    <entry>
+        <title>Urban Contemporary</title>
+        <description>
+            A design that offers an effortless transition from the rowdy and demanding city life to your tranquil and easy dwelling. Step inside this home and come face to face with the Urban Contemporary experience, restrained yet surprises you with bursts of flamboyant colors, shapes, and details.
+        </description>
+        <gallery>
+            <item src="uc/300/9-12.jpg" hsrc="uc/9-12.jpg" caption="" />
+            <item src="uc/300/9-13.jpg" hrsc="uc/9-13.jpg" caption=""/>
+            <item src="uc/300/9-13.jpg" hsrc="uc/300/9-13.jpg" caption=""/>
+            <item src="uc/300/9-14.jpg" hsrc="uc/9-14.jpg" caption=""/>
+            <item src="uc/300/9-15.jpg" hsrc="uc/9-15.jpg" caption="" />
+            <item src="uc/300/9-16.jpg" hsrc="uc/9-16.jpg" caption=""/>
+
+        </gallery>
+    </entry>
+    <entry>
+        <title>Condo Living | Philippines</title>
+        <description>
+            Published designs for Condo Living\'s Designer Challenge for its December 2014 issue.
+        </description>
+        <gallery>
+            <item src="cl/300/CL_Dining.jpg" hsrc="cl/CL_Dining.jpg" caption="" />
+            <item src="cl/300/CL_GuestBedroom.jpg" hsrc="cl/CL_GuestBedroom.jpg" caption="" />
+            <item src="cl/300/CL_Kitchen.jpg" hsrc="cl/CL_Kitchen.jpg" caption="" />
+            <item src="cl/300/CL_Living.jpg" hsrc="cl/CL_Living.jpg" caption="" />
+            <item src="cl/300/CL_MasterBedroom.jpg" hsrc="cl/CL_MasterBedroom.jpg" caption="" />
+
+        </gallery>
+    </entry>
+</portfolio>
+

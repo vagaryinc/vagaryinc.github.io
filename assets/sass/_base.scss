@@ -1,0 +1,13 @@
+@mixin shadow-bottom($opacity:0.23) {
+    -webkit-box-shadow: -1px 3px 22px 5px rgba(0,0,0,$opacity);
+    -moz-box-shadow: -1px 3px 22px 5px rgba(0,0,0,$opacity);
+    box-shadow: -1px 3px 22px 5px rgba(0,0,0,$opacity);
+}
+
+.stuck {
+    position: fixed !important;
+    
+    top: 0;
+    
+}
+

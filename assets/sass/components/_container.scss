@@ -1,0 +1,14 @@
+$container_padding: 10px;
+
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 $container_padding;
+    width: 100%;
+    
+    @media screen and (min-device-width: 320px) and (max-device-width: 568px) {
+        width: 80%;
+    }
+    
+}
