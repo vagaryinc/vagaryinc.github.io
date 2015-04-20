@@ -140,7 +140,7 @@ $(function () {
         clientId: '865d05560f40439688919615536bf9fe',
         accessToken: '297900451.865d055.a478c7e22d6f4bd5ab44f67c4230d5df',
         limit: 5,
-        template: '<a href="{{link}}" target="_blank"><img src="{{image}}"/></a>'
+        template: '<a href="{{link}}" target="_blank"><img src="{{image}}" width="150" height="150"/></a>'
     });
     
     feed.run();

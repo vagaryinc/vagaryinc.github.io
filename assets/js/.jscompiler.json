@@ -16,6 +16,7 @@
 		},
 		{
 			"inputs": [
+				"deps.min.js",
 				"app.js",
 				"pf.js"],
 			"output": "app.min.js",

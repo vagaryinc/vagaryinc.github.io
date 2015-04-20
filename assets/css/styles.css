@@ -5,6 +5,7 @@
 * 2. Prevent iOS text size adjust after orientation change, without disabling
 *    user zoom.
 */
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -2173,16 +2174,6 @@ html {
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/globersemiboldfree.eot?#iefix") format("embedded-opentype"), url("../fonts/globersemiboldfree.woff2") format("woff2"), url("../fonts/globersemiboldfree.woff") format("woff"), url("../fonts/globersemiboldfree.ttf") format("truetype"), url("../fonts/globersemiboldfree.svg#Glober Semibold") format("svg"); }
-@font-face {
-  font-family: "Vollkorn Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/vollkorn-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/vollkorn-italic-webfont.woff2") format("woff2"), url("../fonts/vollkorn-italic-webfont.woff") format("woff"), url("../fonts/vollkorn-italic-webfont.ttf") format("truetype"), url("../fonts/vollkorn-italic-webfont.svg#Vollkorn Italic") format("svg"); }
-@font-face {
-  font-family: "Vollkorn Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/vollkorn-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/vollkorn-regular-webfont.woff2") format("woff2"), url("../fonts/vollkorn-regular-webfont.woff") format("woff"), url("../fonts/vollkorn-regular-webfont.ttf") format("truetype"), url("../fonts/vollkorn-regular-webfont.svg#Vollkorn Regular") format("svg"); }
 html {
   font-size: 62.5%; }
 
@@ -2207,7 +2198,7 @@ section, div, h1, h2, h3, h4, h5, h6, ul, ol {
       width: 80%; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Vollkorn Regular", "Times New Roman", serif;
+  font-family: "Vollkorn", "Times New Roman", serif;
   margin-bottom: 2rem;
   font-weight: 300; }
 
@@ -2604,7 +2595,7 @@ p {
   #contact .box {
     height: 50px; }
   #contact .left-block {
-    font-family: "Vollkorn Regular", "Times New Roman", serif;
+    font-family: "Vollkorn", "Times New Roman", serif;
     font-size: 2rem; }
   #contact .right-block {
     font-family: "Glober SemiBold", sans-serif; }
