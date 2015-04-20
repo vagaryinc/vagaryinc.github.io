@@ -2310,7 +2310,7 @@ p {
         transform: scalex(1);
         visibility: visible;
         transition: visibility 0s, scalex 0.5s; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .main-header .menu ul {
       display: none; }
       .main-header .menu ul.menu-show {
@@ -2359,7 +2359,7 @@ p {
   margin: 10px;
   cursor: pointer;
   transition: 0.4s all ease; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .logo {
       left: 41.5%; } }
 
@@ -2392,7 +2392,7 @@ p {
         text-decoration: none;
         color: #fff;
         font-size: 2rem; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .top-links .info {
       float: left;
       text-align: left; }
@@ -2424,9 +2424,12 @@ p {
     line-height: 10px;
     letter-spacing: 1px;
     font-family: "Mohave SemiBold"; }
+    @media screen and (max-width: 320px) {
+      .branding-wrapper .tag-line {
+        line-height: 2px; } }
   .branding-wrapper .background-light {
     color: #fff; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .branding-wrapper {
       top: 30%; }
       .branding-wrapper h1 {
@@ -2445,9 +2448,10 @@ p {
       display: table; }
     #works .section-heading h2 {
       display: inline; }
-      @media screen and (min-width: 320px) and (max-width: 568px) {
+      @media screen and (max-width: 568px) {
         #works .section-heading h2 {
-          display: block; } }
+          display: block;
+          text-align: center; } }
     #works .section-heading .pf-menu {
       display: inline;
       float: right;
@@ -2462,7 +2466,7 @@ p {
         position: relative;
         display: inline-block;
         top: -2px; }
-      @media screen and (min-width: 320px) and (max-width: 568px) {
+      @media screen and (max-width: 568px) {
         #works .section-heading .pf-menu {
           display: block;
           text-align: center;
@@ -2547,7 +2551,7 @@ p {
     visibility: visible;
     opacity: 1;
     transition: visibility 0s, opacity 0.5s; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .pf-menu-wrapper {
       width: 93.5%; } }
 
@@ -2566,7 +2570,7 @@ p {
       padding-top: 0px !important; }
     #about .content-wrapper h3 {
       color: #ddd; }
-    @media screen and (min-width: 320px) and (max-width: 568px) {
+    @media screen and (max-width: 568px) {
       #about .content-wrapper {
         position: relative; } }
 
@@ -2604,9 +2608,7 @@ p {
     font-size: 2rem; }
   #contact .right-block {
     font-family: "Glober SemiBold", sans-serif; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
-    #contact .section-heading {
-      text-align: center; }
+  @media screen and (max-width: 568px) {
     #contact .left-block, #contact .right-block {
       text-align: center; }
     #contact .left-block {
@@ -2636,7 +2638,7 @@ p {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .section-heading {
       text-align: center; } }
 
@@ -2664,7 +2666,7 @@ p {
       color: #333; }
   .left-block p {
     text-align: right; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .left-block {
       float: left;
       display: block;
@@ -2685,7 +2687,7 @@ p {
   width: 74.41059%; }
   .right-block:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 320px) and (max-width: 568px) {
+  @media screen and (max-width: 568px) {
     .right-block {
       float: left;
       display: block;

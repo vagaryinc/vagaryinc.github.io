@@ -21,7 +21,7 @@
 .section-heading {
     @include outer-container;
     
-    @media screen and (min-width: 320px)  and (max-width: 568px) {
+    @media screen  and (max-width: 568px) {
         text-align: center;
     }
 }
@@ -48,7 +48,7 @@
         text-align: right;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 568px) {
+    @media screen and (max-width: 568px) {
         @include span-columns(12);
         
         h3 {
@@ -65,7 +65,7 @@
 .right-block {
     @include span-columns(9);
 
-    @media screen and (min-width: 320px) and (max-width: 568px) {
+    @media screen and (max-width: 568px) {
         @include span-columns(12);
         
         h3 {
