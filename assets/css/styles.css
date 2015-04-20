@@ -2608,6 +2608,11 @@ p {
     #contact .right-block {
       margin-bottom: 10px; } }
 
+#instafeed {
+  text-align: center; }
+  #instafeed img {
+    margin: 4px; }
+
 .section-heading {
   padding-top: 20px; }
   .section-heading h2 {

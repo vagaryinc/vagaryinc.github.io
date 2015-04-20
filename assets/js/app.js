@@ -118,6 +118,20 @@ $(function () {
         }, 700, 'swing');
     });
     
+    
+    var feed = new Instafeed({
+        get: 'user',
+        userId: 1467394148,
+        clientId: '865d05560f40439688919615536bf9fe',
+        accessToken: '297900451.865d055.a478c7e22d6f4bd5ab44f67c4230d5df',
+        limit: 5,
+        template: '<a href="{{link}}" target="_blank"><img src="{{image}}"/></a>'
+    });
+    
+    feed.run();
+    
+    //events
+    
     pf_trigger.click(function () {
         if(!pf_trigger.hasClass('active')) {
            pf_trigger.addClass('active');
