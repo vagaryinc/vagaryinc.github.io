@@ -1,8 +1,7 @@
 @include font-face("Mohave","../fonts/mohave");
 @include font-face("Mohave SemiBold","../fonts/mohavesemibold");
-@include font-face("Glober Thin","../fonts/globerthinfree");
-@include font-face("Glober Semibold", "../fonts/globersemiboldfree");
 @import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
 
 html {
     font-size: 62.5%
@@ -13,9 +12,11 @@ body {
     line-height: 1.6;
     font-weight: 400;
     color: #222;
+    
 }
 
 section, div, h1,h2,h3,h4,h5,h6, ul, ol {
     margin: 0;
     padding: 0;
 }
+
