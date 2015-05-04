@@ -1,5 +1,66 @@
 #services {
-    h3 {
+    @include shadow-top();
+    h2 {
         padding-top: 20px;
+        text-align: center;
+    }
+    
+    #services-list {
+        text-align: center;
+        
+        li {
+            @include shadow-bottom(0.33);
+            display: inline-block;
+            width: 240px;
+            height: 240px;
+            margin: 15px;
+            box-sizing: border-box;
+            padding: 8px;
+            
+            font-size: 1.5em;
+            text-align:center;
+            position: relative;
+            
+            .inner-text {
+                position: absolute;
+                bottom: 0px;
+                width:100%;
+                left: 0;
+                font-variant: small-caps;
+                color:#fff;
+                background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5)); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5)); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)); /* Standard syntax (must be last) */   
+            }
+            
+        }
+    }
+    
+    #id {
+        background: rgba(0,0,0,.9) url("../images/419213_2635465733757_850555024_n.jpg") center no-repeat ;   
+        background-size:cover;
+    }
+    
+    #ic {
+        background: rgba(0,0,0,.9) url("../images/550300_3937770210555_1303978911_n.jpg") center no-repeat;
+        background-size:cover;
+    }
+    
+    #fd {
+        background: rgba(0,0,0,.9) url("../images/550300_3937770210555_1303978911_n.jpg") center no-repeat;
+        background-size:cover;
+    }    
+    #is {
+        background: rgba(0,0,0,.9) url("../images/576067_4641412681177_537004989_n.jpg") center no-repeat;
+        background-size:cover;
+    }    
+    #es {
+        background: rgba(0,0,0,.9) url("../images/428136_2773241218058_1095633017_n.jpg") center no-repeat;
+        background-size:cover;
+    }    
+    #pd {
+        background: url("../images/419163_2635467533802_1009207960_n.jpg")  center no-repeat;
+        background-size:cover;
     }
 }

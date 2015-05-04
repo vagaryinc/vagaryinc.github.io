@@ -1,7 +1,4 @@
 #contact {
-    -webkit-box-shadow: 1px -15px 30px -9px rgba(0,0,0,0.38);
-    -moz-box-shadow: 1px -15px 30px -9px rgba(0,0,0,0.38);
-    box-shadow: 1px -15px 30px -9px rgba(0,0,0,0.38);
     ul {
         list-style: none;
     }
@@ -44,6 +41,10 @@
             margin-bottom: 10px;
         }
     }
+}
+
+#ig-feed {
+    padding-top: 80px;
 }
 
 #instafeed {
