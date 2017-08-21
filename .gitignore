@@ -2,3 +2,4 @@ bower_components/
 .sass-cache/
 *.bat
 assets/images/Originals/
+node_modules/
