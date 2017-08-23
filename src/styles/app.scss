@@ -1,0 +1,25 @@
+@import "~normalize-scss/sass/normalize/import-now";
+@import "settings";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.header {
+  height: $header-height;
+  position:fixed;
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.home-section {
+  display: flex;
+  min-height: 100vh;
+}
+
+.home-section .brand-container {
+  margin: auto;
+}
