@@ -7,6 +7,8 @@
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
   height: $header-height;
   position:fixed;
   width: 100%;
@@ -16,8 +18,15 @@
   @include SetDimensions($header-logo-dims);
 
   background-image: url("assets/images/spritesheet.png");
-  background-position-y: -32px;
+  background-position-y: $header-bg-ypos;
   background-size: cover;
+
+  display: inline-block;
+  margin: auto 0;
+}
+
+.header__brand-text {
+  margin: auto 0;
 }
 
 .section {
