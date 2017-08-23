@@ -3,3 +3,4 @@ bower_components/
 *.bat
 assets/images/Originals/
 node_modules/
+dist/
