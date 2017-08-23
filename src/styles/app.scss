@@ -1,5 +1,6 @@
 @import "~normalize-scss/sass/normalize/import-now";
 @import "settings";
+@import "mixins";
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -9,6 +10,14 @@
   height: $header-height;
   position:fixed;
   width: 100%;
+}
+
+.header__logo {
+  @include SetDimensions($header-logo-dims);
+
+  background-image: url("assets/images/spritesheet.png");
+  background-position-y: -32px;
+  background-size: cover;
 }
 
 .section {

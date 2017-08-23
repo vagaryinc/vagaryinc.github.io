@@ -18,7 +18,11 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
+        loader: 'style-loader!css-loader!resolve-url-loader!sass-loader?sourceMap'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        loader: 'file-loader?name=static/[path][name].[ext]',
       }
     ],
   },
