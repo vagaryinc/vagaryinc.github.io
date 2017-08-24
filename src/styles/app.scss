@@ -12,18 +12,21 @@ html, body {
 }
 
 .header {
-  background-color: $header-bg-color;
-  box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  // box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   height: $header-height;
   position: fixed;
   width: 100%;
   z-index: 30;
-  transition: 0.3s box-shadow ease-in;
+  // transition: 0.3s box-shadow ease-in;
+  > .header__menu rect {
+    fill: #FFF;
+  }
 
   &.-open {
-    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0);
+    // box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0);
     background-color: $menu-bg-color;
 
     > .logo--small {
@@ -31,9 +34,6 @@ html, body {
       transition: 0.3s background-position-y ease-in;
     }
 
-    > .header__menu rect {
-      fill: #FFF;
-    }
   }
 
   > .logo--small {
@@ -103,13 +103,11 @@ html, body {
   background-position-x: -180px;
   display: flex;
   min-height: 100vh;
-  padding-top: $header-height;
   position: relative;
 
   .overlay {
     position: absolute;
-    padding-top: $header-height;
-    height: calc(100vh - #{$header-height});
+    height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
