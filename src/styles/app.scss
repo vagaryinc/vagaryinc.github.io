@@ -19,7 +19,7 @@ html, body {
   height: $header-height;
   position: fixed;
   width: 100%;
-  z-index: 20;
+  z-index: 30;
   transition: 0.3s box-shadow ease-in;
 
   &.-open {
@@ -69,7 +69,7 @@ html, body {
   position: absolute;
   transform: translateY(56px);
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   transition: 0.3s transform ease-in;
   &.-closed {
     transform: translateY(-100%);
@@ -101,6 +101,25 @@ html, body {
   background-image: url('assets/images/guestroom-v4.jpg');
   background-size: cover;
   background-position-x: -180px;
+  display: flex;
   min-height: 100vh;
   padding-top: $header-height;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    padding-top: $header-height;
+    height: calc(100vh - #{$header-height});
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .brand-container {
+    margin: auto 0;
+    z-index: 10;
+  }
+  .home-section__brand-text {
+    color: #FFF;
+    font-size: 48px;
+    padding-left: 24px;
+  }
 }
