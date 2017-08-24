@@ -8,25 +8,40 @@
 
 html, body {
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
+  background-color: $header-bg-color;
+  box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   height: $header-height;
   position:fixed;
   width: 100%;
+
+  > .logo--small {
+    align-self: flex-start;
+    display: inline-block;
+    margin: auto 0;
+  }
+
+  > .header__menu {
+    @include SetDimensions(36px);
+    align-self: flex-end;
+    cursor: pointer;
+    display: flex;
+    margin: auto 12px auto auto;
+  }
 }
 
-.header__logo {
-  @include SetDimensions($header-logo-dims);
 
+.logo--small {
+  @include SetDimensions($header-logo-dims);
+  
   background-image: url("assets/images/spritesheet.png");
   background-position-y: $header-bg-ypos;
   background-size: cover;
-
-  display: inline-block;
-  margin: auto 0;
 }
 
 .header__brand-text {
@@ -43,28 +58,11 @@ html, body {
 
 .home-section .brand-container {
   margin: auto;
+  padding-top: $header-height;
 }
 
-.home-section .brand-tagline {
-  height: 33vh;
+.brand-tagline-container {
   display: flex;
-  width: 100vw;
-}
-
-.brand-tagline {
-  .-inner {
-    margin: auto;
-  }
-
-  &.-ideation {
-    background-color: #737373;
-  }
-
-  &.-composition {
-    background-color: #FFFFFF;
-  }
-
-  &.-execution {
-    background-color: #434343;
-  }
+  flex-direction: column;
+  height: calc(100vh - #{$header-height});
 }
