@@ -20,20 +20,9 @@ html, body {
   position: fixed;
   width: 100%;
   z-index: 30;
-  // transition: 0.3s box-shadow ease-in;
+
   > .header__menu rect {
     fill: #FFF;
-  }
-
-  &.-open {
-    // box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0);
-    background-color: $menu-bg-color;
-
-    > .logo--small {
-      background-position-y: $header-lightbg-ypos;
-      transition: 0.3s background-position-y ease-in;
-    }
-
   }
 
   > .logo--small {
