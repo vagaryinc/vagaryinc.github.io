@@ -1,7 +1,7 @@
 /**
  * @fileoverview Module for the #Menu element ie. the page navigation.
 */
-import $ from 'jQuery';
+import $ from 'uery';
 import HeaderMenu from './header-menu';
 
 const Menu = Object.assign({}, HeaderMenu, {
