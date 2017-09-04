@@ -33,9 +33,13 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "ajv": "^5.2.2",
+    "ajv-keywords": "^2.1.0",
     "bootstrap": "^4.0.0-beta",
+    "foundation-sites": "^6.4.3",
     "jquery": "^3.2.1",
     "normalize-scss": "^7.0.0",
-    "popper": "^1.0.0"
+    "popper": "^1.0.0",
+    "popper.js": "^1.12.5"
   }
 }
