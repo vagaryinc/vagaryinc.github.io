@@ -1,7 +1,7 @@
 /**
  * @fileoverview Module for the #HeaderMenu element ie. the menu trigger in the header.
 */
-import $ from 'jQuery';
+import $ from 'jquery';
 
 const HeaderMenu = {
   /** @type {?jQuery} */
