@@ -7,27 +7,37 @@
   </head>
   <body>
     <main id="Main" class="main">
-      <header id="Header" class="header">
-        <div class="logo--small"></div>
-        <div id="HeaderMenu" class="header__menu">
-          <svg id="MenuIcon" version="1.1"
-            baseProfile="full"
-            width="36px" height="36px"
-            xmlns="http://www.w3.org/2000/svg">
-            <rect width="36px" x="4" y="0" height="6px" fill="#434343" />
-            <rect width="24px" x="16" y="12" height="6px" fill="#434343" />
-            <rect width="16px" x="24" y="24" height="6px" fill="#434343" />
-          </svg>
+      <header id="Header" class="header top-bar small-horizontal-menu">
+        <div class="top-bar-left">
+          <div class="logo--small"></div>
+          <ul class="menu__content" data-hide-for="small">
+              <li>Home</li>
+              <li>Works</li>
+              <li>Contact</li>
+              <li>About Us</li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+          <button id="HeaderMenu" class="header__menu" data-toggle="Menu">
+              <svg id="MenuIcon" version="1.1"
+                baseProfile="full"
+                width="36px" height="36px"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="36px" x="4" y="0" height="6px" fill="#FFF" />
+                <rect width="24px" x="16" y="12" height="6px" fill="#FFF" />
+                <rect width="16px" x="24" y="24" height="6px" fill="#FFF" />
+              </svg>
+            </button>
         </div>
       </header>
-      <aside id="Menu" class="menu">
+      <nav id="Menu" class="menu">
         <ul class="menu__content">
           <li>Home</li>
           <li>Works</li>
           <li>Contact</li>
           <li>About Us</li>
         </ul>
-      </aside>
+      </nav>
       <section id="HomeSection" class="home-section section">
         <div class="brand-container">
           <span class="brand-text home-section__brand-text">Vagary, Inc.</span>
