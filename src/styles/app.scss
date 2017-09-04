@@ -1,15 +1,14 @@
-@import "~normalize-scss/sass/normalize/import-now";
+@import "~foundation-sites/scss/foundation";
 @import "settings";
 @import "mixins";
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
-html, body {
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
+@include foundation-everything();
+
+// html, body {
+//   height: 100%;
+//   font-family: Arial, Helvetica, sans-serif;
+// }
 
 .header {
   background-color: transparent;
@@ -42,7 +41,7 @@ html, body {
 
 .logo--small {
   @include SetDimensions($header-logo-dims);
-  
+
   background-image: url("assets/images/spritesheet.png");
   background-position-y: $header-bg-ypos;
   background-size: cover;
@@ -72,6 +71,7 @@ html, body {
     padding: #{$header-height} 0 0 0;
     text-align: center;
     display: flex;
+    width: 100%;
 
     > li {
       border-bottom: 1px solid #FFF;
