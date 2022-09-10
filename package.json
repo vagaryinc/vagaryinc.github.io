@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/justinmandac/vagaryinc-site#readme",
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "browser-sync": "^2.27.10"
   }
 }
